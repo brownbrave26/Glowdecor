@@ -1,0 +1,15 @@
+document.addEventListener('DOMContentLoaded', function () {
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function () {
+            const product = this.getAttribute('data-product');
+            const price = parseFloat(this.getAttribute('data-price'));
+
+            // For demonstration purposes, you can log the selected product and price to the console
+            console.log(`Added to cart: ${product} - $${price.toFixed(2)}`);
+            
+            // You can add more sophisticated logic here, such as updating a shopping cart on the website.
+        });
+    });
+});
